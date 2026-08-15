@@ -1,20 +1,20 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
-title: "package_name: SHORT DESCRIPTION"
+title: "ninjax: Joint multi-messenger parameter estimation in JAX"
 version: 0.0.1
-repository-code: "https://github.com/YOUR_ORG/package_name"
+repository-code: "https://github.com/nuclear-multimessenger-astronomy/ninjax"
 license: MIT
 authors:
-  - family-names: YOUR_LAST_NAME
-    given-names: YOUR_FIRST_NAME
-    email: your@email.com
+  - family-names: Pang
+    given-names: Peter
+    email: tsunhopang@gmail.com
 preferred-citation:
   type: article
   title: "YOUR PAPER TITLE"
   authors:
-    - family-names: YOUR_LAST_NAME
-      given-names: YOUR_FIRST_NAME
+    - family-names: Pang
+      given-names: Peter
   doi: "YOUR_DOI"
   journal: "YOUR_JOURNAL"
   year: 2025

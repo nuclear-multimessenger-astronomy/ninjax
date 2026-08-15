@@ -1,1 +1,1 @@
-"""Test suite for package_name."""
+"""Test suite for ninjax."""

@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/package_name"]
+packages = ["src/ninjax"]
 
 [tool.hatch.build.targets.sdist]
 exclude = [
@@ -16,20 +16,28 @@ exclude = [
 ]
 
 [project]
-name = "package_name"
+name = "ninjax"
 authors = [
-  {name = "YOUR NAME", email = "your@email.com"},
+  {name = "Peter T. H. Pang", email = "tsunhopang@gmail.com"},
 ]
 version = "0.0.1"
-description = "SHORT DESCRIPTION OF YOUR PACKAGE"
-keywords = ["keyword1", "keyword2"]
+description = "Joint multi-messenger parameter estimation in JAX"
+keywords = [
+    "gravitational-waves",
+    "kilonova",
+    "multi-messenger",
+    "equation-of-state",
+    "bayesian-inference",
+    "jax",
+]
 readme = "README.md"
 requires-python = ">=3.11, <3.14"
 license = {file = "LICENSE"}
-urls = {repository = "https://github.com/YOUR_ORG/package_name"}
+urls = {repository = "https://github.com/nuclear-multimessenger-astronomy/ninjax"}
 dependencies = [
-    # Add your runtime dependencies here
-    # "numpy>=1.24.0",
+    "jimgw>=0.5.0",      # GW: likelihoods, priors, transforms, sampler drivers
+    "fiestaEM>=0.2.1",   # EM: kilonova and afterglow surrogate light curves
+    "jesterTOV",         # EOS: metamodel/CSE equations of state and TOV solver
 ]
 
 classifiers = [
@@ -75,6 +83,25 @@ dev = [
     "ruff>=0.15.0",
 ]
 
+# jesterTOV on PyPI is still 0.1.1, which ships the older flat `eos.py`/`tov.py`
+# layout. ninjax targets the restructured `eos/`, `tov/` packages, so track main.
+[tool.uv.sources]
+jesterTOV = { git = "https://github.com/nuclear-multimessenger-astronomy/jester.git", branch = "main" }
+
+# jim owns the sampler, so its pins win wherever jester disagrees. jester's own
+# bounds exist to support its `jesterTOV.inference` stack, which ninjax does not
+# use -- we drive jester only as an EOS/TOV library. Overriding these breaks
+# `jesterTOV.inference.samplers.flowmc` (and `run_inference`, which imports it);
+# the EOS/TOV physics path and jester's likelihood base classes are unaffected.
+[tool.uv]
+override-dependencies = [
+    "jax>=0.8.2",      # jim needs >=0.8.2; jester caps <0.8.0
+    "jaxlib>=0.8.2",
+    "blackjax>=1.6",   # jim needs PyPI >=1.6; jester requests a git fork
+    "flowmc>=0.6.1",   # jim needs >=0.6.1; jester pins ==0.4.5
+    "optax>=0.2.7",    # required transitively by flowmc>=0.6.1; jester caps <0.2.7
+]
+
 [tool.ruff]
 extend-exclude = ["examples/"]
 
@@ -96,7 +123,7 @@ order-by-type = false
 
 [tool.pyright]
 reportIncompatibleMethodOverride = true
-include = ["src/package_name"]
+include = ["src/ninjax"]
 
 # pyproject.toml
 [tool.pytest.ini_options]
@@ -110,7 +137,7 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["package_name"]
+source = ["ninjax"]
 omit = ["*/tests/*", "*/examples/*"]
 
 [tool.coverage.report]

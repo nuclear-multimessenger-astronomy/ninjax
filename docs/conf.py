@@ -6,9 +6,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path("..").resolve()))
 
 # -- Project information -----------------------------------------------------
-project = "package_name"
-copyright = "2025, package_name developers"
-author = "package_name developers"
+project = "ninjax"
+copyright = "2025, ninjax developers"
+author = "ninjax developers"
 release = "0.0.1"
 version = "0.0.1"
 
@@ -60,7 +60,7 @@ html_theme_options = {
     "use_fullscreen_button": False,
     "use_download_button": False,
     "use_repository_button": True,
-    "repository_url": "https://github.com/YOUR_ORG/package_name",
+    "repository_url": "https://github.com/nuclear-multimessenger-astronomy/ninjax",
     "home_page_in_toc": True,
     "show_toc_level": 2,
     "logo": {
@@ -69,7 +69,7 @@ html_theme_options = {
     },
 }
 
-html_title = "package_name"
+html_title = "ninjax"
 html_favicon = "_static/icon.svg"
 
 pygments_style = "xcode"

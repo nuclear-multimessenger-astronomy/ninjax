@@ -1,6 +1,6 @@
-# Contributing to package_name
+# Contributing to ninjax
 
-Thank you for your interest in contributing to package_name! This guide will help you get started with development.
+Thank you for your interest in contributing to ninjax! This guide will help you get started with development.
 
 ## Quick Start
 
@@ -8,8 +8,8 @@ Thank you for your interest in contributing to package_name! This guide will hel
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_ORG/package_name
-cd package_name
+git clone https://github.com/nuclear-multimessenger-astronomy/ninjax
+cd ninjax
 
 # Install with development dependencies
 uv sync --extra dev
@@ -28,7 +28,7 @@ uv run pytest tests/
 uv run pytest tests/test_example.py -v
 
 # Run type checking
-uv run pyright src/package_name/
+uv run pyright src/ninjax/
 
 # Run pre-commit checks
 uv run pre-commit run --all-files
@@ -103,7 +103,7 @@ uv run sphinx-autobuild docs docs/_build/html
 3. **Run the test suite**:
    ```bash
    uv run pytest tests/ -m "not slow"
-   uv run pyright src/package_name/
+   uv run pyright src/ninjax/
    uv run pre-commit run --all-files
    ```
 
@@ -132,9 +132,9 @@ uv run sphinx-autobuild docs docs/_build/html
 
 ## Getting Help
 
-- **Documentation**: https://YOUR_ORG.github.io/package_name/
-- **Issues**: https://github.com/YOUR_ORG/package_name/issues
-- **Discussions**: https://github.com/YOUR_ORG/package_name/discussions
+- **Documentation**: https://nuclear-multimessenger-astronomy.github.io/ninjax/
+- **Issues**: https://github.com/nuclear-multimessenger-astronomy/ninjax/issues
+- **Discussions**: https://github.com/nuclear-multimessenger-astronomy/ninjax/discussions
 
 ## Code of Conduct
 

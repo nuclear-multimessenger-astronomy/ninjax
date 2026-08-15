@@ -10,7 +10,7 @@ Steps to follow every time you start a new package from this template.
 make init
 ```
 
-Renames all `package_name` / `YOUR_ORG` / `YOUR_NAME` placeholders in one pass. Run this before doing anything else.
+Renames all `ninjax` / `nuclear-multimessenger-astronomy` / `YOUR_NAME` placeholders in one pass. Run this before doing anything else.
 
 ---
 

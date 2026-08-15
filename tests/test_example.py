@@ -1,10 +1,10 @@
-"""Placeholder tests for package_name.
+"""Placeholder tests for ninjax.
 
 Replace this file with actual tests for your package.
 """
 
 # import pytest
-# import package_name
+# import ninjax
 
 
 # TODO: Add meaningful tests here.
@@ -12,8 +12,8 @@ Replace this file with actual tests for your package.
 #
 # Example:
 # def test_my_function_with_valid_input_returns_expected():
-#     result = package_name.my_function(valid_input)
+#     result = ninjax.my_function(valid_input)
 #     assert result == expected_output
 #
 # def test_version():
-#     assert isinstance(package_name.__version__, str)
+#     assert isinstance(ninjax.__version__, str)

@@ -9,7 +9,7 @@ For full contributing guidelines, see [`CONTRIBUTING.md`](../../CONTRIBUTING.md)
 uv run pytest tests/ -m "not slow"
 
 # Type checking
-uv run pyright src/package_name/
+uv run pyright src/ninjax/
 
 # Pre-commit checks
 uv run pre-commit run --all-files

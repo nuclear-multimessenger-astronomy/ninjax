@@ -1,24 +1,24 @@
-package_name documentation
+ninjax documentation
 ==========================
 
 *SHORT TAGLINE FOR YOUR PACKAGE*
 
-``package_name`` does [DESCRIBE WHAT YOUR PACKAGE DOES].
+``ninjax`` does [DESCRIBE WHAT YOUR PACKAGE DOES].
 
 
-What's in ``package_name``?
+What's in ``ninjax``?
 ============================
 
-``package_name`` provides [DESCRIBE THE KEY COMPONENTS].
+``ninjax`` provides [DESCRIBE THE KEY COMPONENTS].
 
 .. grid:: 2
     :class-container: component-grid
 
-    .. grid-item:: :doc:`Module A <api/package_name>`
+    .. grid-item:: :doc:`Module A <api/ninjax>`
 
        Description of module A
 
-    .. grid-item:: :doc:`Module B <api/package_name>`
+    .. grid-item:: :doc:`Module B <api/ninjax>`
 
        Description of module B
 
@@ -26,8 +26,8 @@ What's in ``package_name``?
 Getting started
 ===============
 
-* Check out the :doc:`examples/getting_started` to get familiar with ``package_name``.
-* Dive into the code itself in the API reference of :doc:`api/package_name`.
+* Check out the :doc:`examples/getting_started` to get familiar with ``ninjax``.
+* Dive into the code itself in the API reference of :doc:`api/ninjax`.
 
 
 Installation
@@ -35,7 +35,7 @@ Installation
 
 Install the latest version by cloning the repository::
 
-    git clone https://github.com/YOUR_ORG/package_name
+    git clone https://github.com/nuclear-multimessenger-astronomy/ninjax
 
 We recommend using ``uv`` for managing the Python environment::
 
@@ -44,7 +44,7 @@ We recommend using ``uv`` for managing the Python environment::
 
 The package can then be installed directly::
 
-    cd package_name
+    cd ninjax
     uv pip install -e .             # Basic install
     uv pip install -e ".[dev]"      # For developers (tests, docs)
 
@@ -61,7 +61,7 @@ Contents
    :maxdepth: 2
    :caption: API reference
 
-   api/package_name
+   api/ninjax
 
 .. toctree::
    :maxdepth: 2

@@ -1,6 +1,6 @@
 # Citing
 
-If you use `package_name` in your work, please cite the following paper(s):
+If you use `ninjax` in your work, please cite the following paper(s):
 
 ```bibtex
 @article{your_citation_key,

@@ -4,7 +4,7 @@
 
 # GitHub Actions workflows require review before changes can be merged
 # This prevents unauthorized modifications to CI/CD and automation
-/.github/workflows/ @YOUR_GITHUB_USERNAME
+/.github/workflows/ @nuclear-multimessenger-astronomy
 
 # Security: Require review for changes to security-sensitive files
-/.github/CODEOWNERS @YOUR_GITHUB_USERNAME
+/.github/CODEOWNERS @nuclear-multimessenger-astronomy
