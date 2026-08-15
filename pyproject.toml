@@ -1,0 +1,129 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/package_name"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "examples/*/outdir/",
+    "examples/**/outdir/",
+    "dist/",
+]
+
+[project]
+name = "package_name"
+authors = [
+  {name = "YOUR NAME", email = "your@email.com"},
+]
+version = "0.0.1"
+description = "SHORT DESCRIPTION OF YOUR PACKAGE"
+keywords = ["keyword1", "keyword2"]
+readme = "README.md"
+requires-python = ">=3.11, <3.14"
+license = {file = "LICENSE"}
+urls = {repository = "https://github.com/YOUR_ORG/package_name"}
+dependencies = [
+    # Add your runtime dependencies here
+    # "numpy>=1.24.0",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Topic :: Scientific/Engineering',
+    'Operating System :: POSIX',
+    'Operating System :: Unix',
+    'Operating System :: MacOS',
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-xdist>=3.0",
+    "hypothesis>=6.0",
+    "pytest-timeout>=2.1.0",
+    "pre-commit>=4.5.0",
+    "sphinx>=7.0",
+    "sphinx-autobuild",
+    "sphinx-book-theme>=1.0",
+    "sphinx-design>=0.5",
+    "nbsphinx>=0.9",
+    "sphinx-autodoc-typehints>=1.12",
+    "sphinx-copybutton>=0.5",
+    "myst-parser>=2.0",
+    "sphinxcontrib-mermaid>=1.0",
+    "sphinxcontrib-bibtex>=2.0",
+    "ipykernel>=7.1.0",
+    "nbconvert>=7.0"
+]
+
+[dependency-groups]
+dev = [
+    "nbqa>=1.9.1",
+    "ruff>=0.15.0",
+]
+
+[tool.ruff]
+extend-exclude = ["examples/"]
+
+[tool.ruff.lint]
+ignore = [
+    "F722",  # Forward annotation false positive
+    "F821",  # Undefined name
+    "E731",  # Lambda expressions
+    "E741",  # Ambiguous variable name
+    "F841",  # Unused local variable
+    "E722",  # Bare except
+    "E402",  # Module level import not at top of file
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+lines-after-imports = 2
+order-by-type = false
+
+[tool.pyright]
+reportIncompatibleMethodOverride = true
+include = ["src/package_name"]
+
+# pyproject.toml
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --strict-config --timeout=300"
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
+
+[tool.coverage.run]
+source = ["package_name"]
+omit = ["*/tests/*", "*/examples/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:"
+]
+
+[tool.setuptools.packages.find]
+exclude = ["*.venv", ".venv", ".venv.*"]

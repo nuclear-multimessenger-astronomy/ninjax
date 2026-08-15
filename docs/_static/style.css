@@ -1,0 +1,61 @@
+@import url("theme.css");
+
+/* Clearer distinction between each class. */
+dl.py.class {
+    border-left: 3px solid #008080;
+    padding: 10px;
+}
+
+/* Remove unnecessary scroll bar https://github.com/executablebooks/sphinx-book-theme/issues/732 */
+#rtd-footer-container {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* Component grid styling */
+.component-grid {
+  font-size: smaller;
+}
+
+.component-grid > div {
+  gap: 20px;
+}
+
+.component-grid .sd-col {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  width: calc(50% - 10px);
+  padding: 16px;
+}
+
+.component-grid .sd-col > p {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Make header (first paragraph) larger */
+.component-grid .sd-col > p:first-of-type {
+  font-size: 1.5em;
+}
+
+/* Make description (second paragraph) italic */
+.component-grid .sd-col > p:nth-of-type(2) {
+  font-style: italic;
+}
+
+.component-grid ul {
+  list-style-type: none;
+  padding-inline-start: 0.5em;
+}
+
+.component-grid a {
+  text-decoration: none;
+}
+
+.math {
+    text-align: left;
+}
+.eqno {
+    float: right;
+}

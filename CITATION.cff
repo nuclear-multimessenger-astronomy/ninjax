@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "package_name: SHORT DESCRIPTION"
+version: 0.0.1
+repository-code: "https://github.com/YOUR_ORG/package_name"
+license: MIT
+authors:
+  - family-names: YOUR_LAST_NAME
+    given-names: YOUR_FIRST_NAME
+    email: your@email.com
+preferred-citation:
+  type: article
+  title: "YOUR PAPER TITLE"
+  authors:
+    - family-names: YOUR_LAST_NAME
+      given-names: YOUR_FIRST_NAME
+  doi: "YOUR_DOI"
+  journal: "YOUR_JOURNAL"
+  year: 2025
+  url: "https://arxiv.org/abs/YOUR_ARXIV_ID"
