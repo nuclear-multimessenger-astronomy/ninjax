@@ -5,7 +5,7 @@
 <h1 align="center">ninjax</h1>
 
 <p align="center">
-  <em>Joint multi-messenger parameter estimation in JAX</em>
+  <strong>N</strong>uclear mult<strong>i</strong>-messenger i<strong>n</strong>ference with <strong>JAX</strong>
 </p>
 
 <p align="center">
