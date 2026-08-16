@@ -1,9 +1,17 @@
-[![CI](https://github.com/nuclear-multimessenger-astronomy/ninjax/actions/workflows/ci.yml/badge.svg)](https://github.com/nuclear-multimessenger-astronomy/ninjax/actions/workflows/ci.yml)
-[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://nuclear-multimessenger-astronomy.github.io/ninjax/)
+<p align="center">
+  <img src="docs/_static/logo.png" alt="ninjax logo" width="300">
+</p>
 
-# ninjax
+<h1 align="center">ninjax</h1>
 
-*Joint multi-messenger parameter estimation in JAX*
+<p align="center">
+  <em>Joint multi-messenger parameter estimation in JAX</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nuclear-multimessenger-astronomy/ninjax/actions/workflows/ci.yml"><img src="https://github.com/nuclear-multimessenger-astronomy/ninjax/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://nuclear-multimessenger-astronomy.github.io/ninjax/"><img src="https://img.shields.io/badge/docs-GitHub%20Pages-blue" alt="Documentation"></a>
+</p>
 
 `ninjax` is a JAX reimplementation of [`nmma`](https://github.com/nuclear-multimessenger-astronomy/nmma).
 It performs joint Bayesian inference over gravitational-wave, electromagnetic, and
